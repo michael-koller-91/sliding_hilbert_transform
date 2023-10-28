@@ -42,12 +42,19 @@ plt.plot(x, "k", linewidth=0.8, label="A * sin + noise")
 plt.plot(np.abs(H), "b:", linewidth=1.9, label="full-length transform")
 plt.plot(-np.abs(H), "b:", linewidth=1.9)
 
-plt.plot(np.abs(H_slide), "-.", color="orange", linewidth=1.7, label="sliding window transform")
+plt.plot(
+    np.abs(H_slide),
+    "-.",
+    color="orange",
+    linewidth=1.7,
+    label="sliding window transform",
+)
 plt.plot(-np.abs(H_slide), "-.", color="orange", linewidth=1.7)
+
 plt.plot(env, "g--", label="A")
 plt.plot(-env, "g--")
 
 plt.legend()
-plt.savefig('example.png')
+plt.savefig("example.png")
 
-print('generated example.png.')
+print("generated example.png.")
