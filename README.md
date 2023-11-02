@@ -4,6 +4,7 @@ This is an implementation of the sliding window Hilbert transform derived in [my
 
 ## Requirements
 ```python
+matplotlib
 numba
 numpy
 scipy
