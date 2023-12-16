@@ -46,7 +46,6 @@ def transform(x, l_window):
         W[0] = 1
         W[1 : (l_window + 1) // 2] = 2
 
-    w = scipy.fft.ifft(W)
     w = np.roll(scipy.fft.ifft(W), -1)
 
     # Hilbert transform of the first row
@@ -111,7 +110,6 @@ def sliding_transform(x, l_window, n_lag):
         W[0] = 1
         W[1 : (l_window + 1) // 2] = 2
 
-    w = scipy.fft.ifft(W)
     w = np.roll(scipy.fft.ifft(W), -1)
 
     # initial Hilbert transform
